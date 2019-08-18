@@ -44,25 +44,25 @@ iface eth2.30 inet manual
 
 auto br10
 iface br10 inet static
-  bridge_ports eth1.10 eth2.10
+    bridge_ports eth1.10 eth2.10
     address 10.0.10.1/24
 
 auto br20
 iface br20 inet static
-  bridge_ports eth1.20 eth2.20
+    bridge_ports eth1.20 eth2.20
     address 10.0.20.1/24
 
 auto br30
 iface br30 inet static
-  bridge_ports eth1.30 eth2.30
+    bridge_ports eth1.30 eth2.30
     address 10.0.30.1/24
 
 auto br40
 iface br40 inet static
-  bridge_ports eth1.40
+    bridge_ports eth1.40
     address 10.0.40.1/24
 
 auto br50
 iface br50 inet static
-  bridge_ports eth1.50
+    bridge_ports eth1.50
     address 10.0.50.1/24
