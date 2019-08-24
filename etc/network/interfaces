@@ -1,68 +1,62 @@
-# /etc/network/interfaces
-#
-# source /etc/network/interfaces.d/*
-#
+source /etc/network/interfaces.d/*
 
 auto lo
 iface lo inet loopback
 
-auto eth0
-iface eth0 inet static
-    address 192.168.1.2/24
-    gateway 192.168.1.1
-    dns-nameservers 8.8.8.8 8.8.4.4
+auto enp1s0
+iface enp1s0 inet dhcp
 
-auto eth1
-iface eth1 inet manual
+auto enp2s0
+iface enp2s0 inet manual
 
-auto eth1.10
-iface eth1.10 inet manual
+auto enp2s0.10
+iface enp2s0.10 inet manual
 
-auto eth1.20
-iface eth1.20 inet manual
+auto enp2s0.20
+iface enp2s0.20 inet manual
 
-auto eth1.30
-iface eth1.30 inet manual
+auto enp2s0.30
+iface enp2s0.30 inet manual
 
-auto eth1.40
-iface eth1.40 inet manual
+auto enp2s0.40
+iface enp2s0.40 inet manual
 
-auto eth1.50
-iface eth1.50 inet manual
+auto enp2s0.50
+iface enp2s0.50 inet manual
 
-auto eth2
-iface eth2 inet manual
+auto enp3s0
+iface enp3s0 inet manual
 
-auto eth2.10
-iface eth2.10 inet manual
+auto enp3s0.10
+iface enp3s0.10 inet manual
 
-auto eth2.20
-iface eth2.20 inet manual
+auto enp3s0.20
+iface enp3s0.20 inet manual
 
-auto eth2.30
-iface eth2.30 inet manual
+auto enp3s0.30
+iface enp3s0.30 inet manual
 
 auto br10
 iface br10 inet static
-    bridge_ports eth1.10 eth2.10
+    bridge_ports enp2s0.10 enp3s0.10
     address 10.0.10.1/24
 
 auto br20
 iface br20 inet static
-    bridge_ports eth1.20 eth2.20
+    bridge_ports enp2s0.20 enp3s0.20
     address 10.0.20.1/24
 
 auto br30
 iface br30 inet static
-    bridge_ports eth1.30 eth2.30
+    bridge_ports enp2s0.30 enp3s0.30
     address 10.0.30.1/24
 
 auto br40
 iface br40 inet static
-    bridge_ports eth1.40
+    bridge_ports enp2s0.40
     address 10.0.40.1/24
 
 auto br50
 iface br50 inet static
-    bridge_ports eth1.50
+    bridge_ports enp2s0.50
     address 10.0.50.1/24
