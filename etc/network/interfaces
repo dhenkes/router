@@ -5,9 +5,11 @@ iface lo inet loopback
 
 auto enp1s0
 iface enp1s0 inet dhcp
+iface enp1s0 inet6 auto
 
 auto enp2s0
-iface enp2s0 inet manual
+iface enp2s0 inet static
+    address 10.0.0.1/24
 
 auto enp2s0.10
 iface enp2s0.10 inet manual
