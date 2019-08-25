@@ -48,7 +48,7 @@ apt upgrade
 apt install vim
 ```
 
-### Router specific packages
+### Install packages
 
 After everything is updated and installed, we can go ahead and add the router
 specific packages.
