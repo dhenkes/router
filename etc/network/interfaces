@@ -14,6 +14,9 @@ iface enp2s0 inet static
 auto enp2s0.10
 iface enp2s0.10 inet manual
 
+auto enp2s0.11
+iface enp2s0.11 inet manual
+
 auto enp2s0.20
 iface enp2s0.20 inet manual
 
@@ -42,6 +45,11 @@ auto br10
 iface br10 inet static
     bridge_ports enp2s0.10 enp3s0.10
     address 10.0.10.1/24
+
+auto br11
+iface br11 inet static
+    bridge_ports enp2s0.11
+    address 10.0.11.1/24
 
 auto br20
 iface br20 inet static
