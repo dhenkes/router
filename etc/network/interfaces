@@ -8,8 +8,7 @@ iface enp1s0 inet dhcp
 iface enp1s0 inet6 auto
 
 auto enp2s0
-iface enp2s0 inet static
-    address 10.0.0.1/24
+iface enp2s0 inet manual
 
 auto enp2s0.10
 iface enp2s0.10 inet manual
@@ -40,6 +39,11 @@ iface enp3s0.20 inet manual
 
 auto enp3s0.30
 iface enp3s0.30 inet manual
+
+auto br0
+iface br0 inet static
+    bridge_ports enp2s0 enp3s0
+    address 10.0.0.1/24
 
 auto br10
 iface br10 inet static
